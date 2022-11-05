@@ -1,0 +1,424 @@
+// 间距
+$padding-flex: 10px;
+
+.VideoCompler__ {
+    background: url("./static/bg.png") center/100% 100% no-repeat;
+    padding: 20px;
+    box-sizing: border-box;
+    min-height: 100vh;
+
+    .video-xlb-player-container {
+        margin: 0 auto;
+        padding: $padding-flex $padding-flex;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        background: url("./static/border.png") center/100% 100% no-repeat;
+
+        .player-item {
+            display: none;
+            min-height: 100px;
+            position: relative;
+            .tag-player {
+                position: relative;
+                display: none;
+                .control-label {
+                    position: absolute;
+                    left: 3px;
+                    top: 3px;
+                    font-weight: 700;
+                    color: #ecf3fc;
+                    padding: 3px 10px;
+                    background-color: #161616;
+                    z-index: 999;
+                    border-radius: 5px;
+                    opacity: 0.7;
+                }
+                .control-close {
+                    position: absolute;
+                    right: 10px;
+                    cursor: default;
+                    width: 20px;
+                    height: 20px;
+                    border-radius: 5px;
+                    top: 10px;
+                    color: white;
+                    font-weight: 700;
+                    background-color: #1890ff;
+                    padding: 3px;
+                    z-index: 999;
+                    user-select: none;
+                    display: none;
+                    &:hover {
+                        background-color: #40a9ff;
+                    }
+                    &:active {
+                        background-color: #096dd9;
+                    }
+                }
+                &:hover {
+                    .control-close {
+                        display: block;
+                    }
+                }
+            }
+            .tag-list {
+                display: block;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+        }
+    }
+    // 1屏
+    .oneP.video-xlb-player-container {
+        .player-item:nth-child(1) {
+            display: block !important;
+            width: 80%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+    // 2屏
+    .twoP.video-xlb-player-container {
+        justify-content: space-around;
+        .player-item:nth-child(1),
+        .player-item:nth-child(2) {
+            display: block;
+            width: 48%;
+        }
+    }
+    // 3屏
+    .threeP.video-xlb-player-container {
+        justify-content: space-around;
+        .player-item:nth-child(1),
+        .player-item:nth-child(2),
+        .player-item:nth-child(3) {
+            display: block;
+            width: 30%;
+        }
+    }
+    // 4屏
+    .fourP.video-xlb-player-container {
+        justify-content: space-around;
+        background-size: 88% 100%;
+        .player-item:nth-child(1),
+        .player-item:nth-child(2) {
+            margin-bottom: $padding-flex;
+        }
+        .player-item:nth-child(1),
+        .player-item:nth-child(2),
+        .player-item:nth-child(3),
+        .player-item:nth-child(4) {
+            display: block;
+            width: 35%;
+        }
+    }
+    // 5屏
+    .fiveP.video-xlb-player-container {
+        justify-content: space-around;
+        .player-item:nth-child(1),
+        .player-item:nth-child(2),
+        .player-item:nth-child(3) {
+            margin-bottom: $padding-flex;
+        }
+        .player-item:nth-child(4) {
+            margin-right: 33%;
+        }
+        .player-item:nth-child(1),
+        .player-item:nth-child(2),
+        .player-item:nth-child(3),
+        .player-item:nth-child(4),
+        .player-item:nth-child(5) {
+            display: block;
+            width: 30%;
+        }
+    }
+    // 6屏
+    .sixP.video-xlb-player-container {
+        justify-content: space-around;
+        .player-item:nth-child(1),
+        .player-item:nth-child(2),
+        .player-item:nth-child(3) {
+            margin-bottom: $padding-flex;
+        }
+
+        .player-item:nth-child(1),
+        .player-item:nth-child(2),
+        .player-item:nth-child(3),
+        .player-item:nth-child(4),
+        .player-item:nth-child(5),
+        .player-item:nth-child(6) {
+            display: block;
+            width: 30%;
+        }
+    }
+    // 7屏
+    .servenP.video-xlb-player-container {
+        justify-content: space-around;
+        .player-item:nth-child(1),
+        .player-item:nth-child(2),
+        .player-item:nth-child(3),
+        .player-item:nth-child(4),
+        .player-item:nth-child(5),
+        .player-item:nth-child(6) {
+            margin-bottom: $padding-flex;
+        }
+
+        .player-item:nth-child(7) {
+            margin-right: 66.666%;
+        }
+
+        .player-item:nth-child(1),
+        .player-item:nth-child(2),
+        .player-item:nth-child(3),
+        .player-item:nth-child(4),
+        .player-item:nth-child(5),
+        .player-item:nth-child(6),
+        .player-item:nth-child(7) {
+            display: block;
+            width: 27%;
+        }
+    }
+    // 8屏
+    .enterP.video-xlb-player-container {
+        justify-content: space-around;
+        .player-item:nth-child(1),
+        .player-item:nth-child(2),
+        .player-item:nth-child(3),
+        .player-item:nth-child(4),
+        .player-item:nth-child(5),
+        .player-item:nth-child(6) {
+            margin-bottom: $padding-flex;
+        }
+        .player-item:nth-child(7) {
+            margin-right: 33.333%;
+        }
+
+        .player-item:nth-child(1),
+        .player-item:nth-child(2),
+        .player-item:nth-child(3),
+        .player-item:nth-child(4),
+        .player-item:nth-child(5),
+        .player-item:nth-child(6),
+        .player-item:nth-child(7),
+        .player-item:nth-child(8) {
+            display: block;
+            width: 27%;
+        }
+    }
+    // 9屏
+    .nineP.video-xlb-player-container {
+        justify-content: space-around;
+        .player-item:nth-child(1),
+        .player-item:nth-child(2),
+        .player-item:nth-child(3),
+        .player-item:nth-child(4),
+        .player-item:nth-child(5),
+        .player-item:nth-child(6) {
+            margin-bottom: $padding-flex;
+        }
+
+        .player-item:nth-child(1),
+        .player-item:nth-child(2),
+        .player-item:nth-child(3),
+        .player-item:nth-child(4),
+        .player-item:nth-child(5),
+        .player-item:nth-child(6),
+        .player-item:nth-child(7),
+        .player-item:nth-child(8),
+        .player-item:nth-child(9) {
+            display: block;
+            width: 27%;
+        }
+    }
+}
+/**
+ * 
+ * 
+ * 
+ * 弹窗和按钮
+ * 
+ * 
+ * 
+ */
+.xlb-dialog-vedio-plugin {
+    position: fixed;
+    padding: 10px;
+    max-height: 50vh;
+    top: 40%;
+    background-color: #5cc0fc;
+    border-radius: 5px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 0 4px rgb(0 0 0 / 10%), 0 0 14px hsl(0deg 0% 93% / 50%);
+    transition: opacity 0.3s;
+    z-index: 1000;
+    .select-contol {
+        min-height: 30px;
+        display: flex;
+        justify-content: flex-end;
+    }
+    .search-result {
+        height: 300px;
+        overflow-y: auto;
+        .result-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 5px 0;
+            align-items: center;
+            border-bottom: 1px solid #1e90ff;
+        }
+        .result-item:nth-child(1) {
+            padding: 15px 0 5px 0;
+        }
+    }
+    .close-button-pu {
+        margin-bottom: 20px;
+    }
+    .search-contol {
+        margin-bottom: 10px;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+    }
+}
+.button-xlb {
+    background-color: #1773d6;
+    padding: 5px;
+    border-radius: 3px;
+    color: #ffffffea;
+    font-weight: 700;
+    font-size: 16px;
+    user-select: none;
+    cursor: default;
+    &:hover {
+        opacity: 0.9;
+    }
+    &:active {
+        background-color: #3ba2ff;
+    }
+}
+select:focus-visible {
+    outline: #1e90ff auto 1px;
+}
+input,
+select {
+    border: 0px solid #306fa5;
+}
+input:focus {
+    outline-color: #1e90ff;
+}
+/**
+ * 
+ * 
+ * 
+ * 播放器样式
+ * 
+ * 
+ * 
+ */
+
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    background-color: #021e50;
+}
+::-webkit-scrollbar-thumb {
+    background-color: rgba(93, 194, 254, 0.5);
+}
+::-webkit-scrollbar-button {
+    background-color: gray;
+}
+::-webkit-scrollbar-corner {
+    background-color: black;
+}
+.video-js {
+    /* 给.video-js设置字体大小以统一各浏览器样式表现，因为video.js采用的是em单位 */
+    font-size: 14px;
+}
+.video-js button {
+    outline: none;
+}
+.video-js.vjs-fluid,
+.video-js.vjs-16-9,
+.video-js.vjs-4-3 {
+    /* 视频占满容器高度 */
+    height: 100%;
+    background-color: #161616;
+}
+.vjs-poster {
+    background-color: #161616;
+}
+.video-js .vjs-big-play-button {
+    /* 中间大的播放按钮 */
+    font-size: 2.5em;
+    line-height: 2.3em;
+    height: 2.5em;
+    width: 2.5em;
+    -webkit-border-radius: 2.5em;
+    -moz-border-radius: 2.5em;
+    border-radius: 2.5em;
+    background-color: rgba(115, 133, 159, 0.5);
+    border-width: 0.12em;
+    margin-top: -1.25em;
+    margin-left: -1.75em;
+}
+.video-js.vjs-paused .vjs-big-play-button {
+    /* 视频暂停时显示播放按钮 */
+    display: block;
+}
+.video-js.vjs-error .vjs-big-play-button {
+    /* 视频加载出错时隐藏播放按钮 */
+    display: none;
+}
+.vjs-loading-spinner {
+    /* 加载圆圈 */
+    font-size: 2.5em;
+    width: 2em;
+    height: 2em;
+    border-radius: 1em;
+    margin-top: -1em;
+    margin-left: -1.5em;
+}
+.video-js .vjs-control-bar {
+    /* 控制条默认显示 */
+    display: flex;
+}
+.video-js .vjs-time-control {
+    display: block;
+}
+.video-js .vjs-remaining-time {
+    display: none;
+}
+
+.vjs-button > .vjs-icon-placeholder:before {
+    /* 控制条所有图标，图标字体大小最好使用px单位，如果使用em，各浏览器表现可能会不大一样 */
+    font-size: 22px;
+    line-height: 1.9;
+}
+.video-js .vjs-playback-rate .vjs-playback-rate-value {
+    line-height: 2.4;
+    font-size: 18px;
+}
+/* 进度条背景色 */
+.video-js .vjs-play-progress {
+    color: #ffb845;
+    background-color: #ffb845;
+}
+.video-js .vjs-progress-control .vjs-mouse-display {
+    background-color: #ffb845;
+}
+.vjs-mouse-display .vjs-time-tooltip {
+    padding-bottom: 6px;
+    background-color: #ffb845;
+}
+.video-js .vjs-play-progress .vjs-time-tooltip {
+    display: none !important;
+}
